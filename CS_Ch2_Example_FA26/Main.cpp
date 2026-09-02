@@ -2,6 +2,7 @@
 
 // Function prototype
 void exampleFunction();
+int modifyValue(int value);
 
 int main()
 {
@@ -10,6 +11,8 @@ int main()
 	exampleFunction();
 	std::cout << "After calling the function." << std::endl;
 
+	std::cout << "We are modifying the value of 5. It is now: " << modifyValue(5) << std::endl;
+
 	return 0;
 }
 
@@ -17,4 +20,11 @@ int main()
 void exampleFunction()
 {
 	std::cout << "Inside the function." << std::endl;
+}
+
+int modifyValue(int value)
+{
+	value = value * value * value;
+
+	return value;
 }
