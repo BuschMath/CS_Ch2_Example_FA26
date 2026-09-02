@@ -6,12 +6,15 @@ int modifyValue(int value);
 
 int main()
 {
+	// Declare a variable
+	int height = 5;
+
 	std::cout << "Before calling the function." << std::endl;
 	// Call the function
 	exampleFunction();
 	std::cout << "After calling the function." << std::endl;
-
-	std::cout << "We are modifying the value of 5. It is now: " << modifyValue(5) << std::endl;
+	
+	std::cout << "We are modifying the value of 5. It is now: " << modifyValue(height) << std::endl;
 
 	return 0;
 }
