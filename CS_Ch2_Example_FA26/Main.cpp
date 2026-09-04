@@ -1,33 +1,55 @@
-#include <iostream>
+/***********************************************
+David Busch
+busch@iowacentral.edu
+Computer Science Fall 2026
+September 4, 2026
+Printing customer information to the console using functions.
+************************************************/
 
-// Function prototype
-void exampleFunction();
-int modifyValue(int value);
+#include <iostream>
+#include <string>
+
+// Global variables. Generally bad practice, but used here for simplicity.
+std::string firstName = "John";
+std::string lastName = "Doe";
+int age = 35;
+std::string address = "123 Main Street";
+
+// Function prototypes
+// printName() - prints the customer's name
+void printName();
+// printAge() - prints the customer's age
+void printAge();
+// printAddress() - prints the customer's address
+void printAddress();
+// printCustomerInfo() - prints all customer information
+void printCustomerInfo();
 
 int main()
 {
-	// Declare a variable
-	int height = 5;
-
-	std::cout << "Before calling the function." << std::endl;
-	// Call the function
-	exampleFunction();
-	std::cout << "After calling the function." << std::endl;
-	
-	std::cout << "We are modifying the value of 5. It is now: " << modifyValue(height) << std::endl;
+	printCustomerInfo();
 
 	return 0;
 }
 
-// Function definition
-void exampleFunction()
+void printName() 
 {
-	std::cout << "Inside the function." << std::endl;
+	std::cout << "Name: " << firstName << " " << lastName << std::endl;
 }
 
-int modifyValue(int value)
+void printAge()
 {
-	value = value * value * value;
+	std::cout << "Age: " << age << std::endl;
+}
 
-	return value;
+void printAddress()
+{
+	std::cout << "Address: " << address << std::endl;
+}
+
+void printCustomerInfo()
+{
+	printName();
+	printAge();
+	printAddress();
 }
